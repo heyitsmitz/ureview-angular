@@ -2,7 +2,7 @@
     <ng-sidebar [(opened)]="sidebarService.opened">
         <app-sidebar></app-sidebar>
     </ng-sidebar>
-    <div ng-sidebar-content>
+    <div ng-sidebar-content class='content-wrapper' [ngClass]="sidebarService.opened ? 'sidebar-opened' : 'sidebar-closed'">
         <app-header></app-header>
         <router-outlet></router-outlet>
     </div>

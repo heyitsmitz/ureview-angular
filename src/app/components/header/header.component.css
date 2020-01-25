@@ -1,7 +1,27 @@
 * { box-sizing: border-box; }
-body {
-  font: 16px Arial;
+
+.navbar-light {
+    background-color: #fff;
 }
+
+.navbar-light .form-control-navbar {
+    background-color: #f2f4f6;
+    border: 0;
+}
+
+.navbar-light .btn-navbar, .navbar-light .form-control-navbar {
+    background-color: #f2f4f6;
+    border: 0;
+}
+
+.form-control-navbar+.input-group-append {
+    margin-left: 0;
+}
+
+.navbar-light .form-control-navbar+.input-group-append>.btn-navbar {
+    color: rgba(0,0,0,.6);
+}
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
