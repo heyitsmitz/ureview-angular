@@ -1,2 +1,9 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<ng-sidebar-container style="height: 100vh;">
+    <ng-sidebar [(opened)]="sidebarService.opened">
+        <app-sidebar></app-sidebar>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+        <app-header></app-header>
+        <router-outlet></router-outlet>
+    </div>
+</ng-sidebar-container>
