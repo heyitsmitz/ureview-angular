@@ -10,6 +10,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UnitCardComponent } from './components/unit-card/unit-card.component';
 import { UnitComponent } from './components/unit/unit.component';
 import { ReviewBoxComponent } from './components/review-box/review-box.component';
+import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReviewBoxComponent } from './components/review-box/review-box.component
     SidebarComponent,
     UnitCardComponent,
     UnitComponent,
-    ReviewBoxComponent
+    ReviewBoxComponent,
+    ReviewCommentComponent
   ],
   imports: [
     BrowserModule,
