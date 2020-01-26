@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UnitCardComponent } from './components/unit-card/unit-card.component';
 import { UnitComponent } from './components/unit/unit.component';
+import { ReviewBoxComponent } from './components/review-box/review-box.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UnitComponent } from './components/unit/unit.component';
     HomeComponent,
     SidebarComponent,
     UnitCardComponent,
-    UnitComponent
+    UnitComponent,
+    ReviewBoxComponent
   ],
   imports: [
     BrowserModule,

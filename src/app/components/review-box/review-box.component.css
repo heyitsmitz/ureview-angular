@@ -1,0 +1,62 @@
+.card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+}
+
+.user-block {
+    float: left;
+}
+
+.user-block img {
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.user-block .username {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -1px;
+}
+
+.user-block .comment, .user-block .description, .user-block .username {
+    display: block;
+    margin-left: 50px;
+}
+
+.user-block .description {
+    color: #6c757d;
+    font-size: 13px;
+    margin-top: -3px;
+}
+
+.card-header>.card-tools {
+    float: right;
+    margin-right: -.625rem;
+}
+
+.btn-default {
+    background-color: #f8f9fa;
+    border-color: #ddd;
+    color: #444;
+}
+
+.btn-tool {
+    background: 0 0;
+    color: #adb5bd;
+    font-size: .875rem;
+    margin: -.75rem 0;
+    padding: .25rem .5rem;
+}
+
+.card-comments {
+    background: #f8f9fa;
+}
+
+.img-sm+.img-push {
+    margin-left: 2.5rem;
+}
