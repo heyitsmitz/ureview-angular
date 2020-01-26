@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule, Router } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
+import { UnitComponent } from './components/unit/unit.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
-  { path: "home", component: HomeComponent }
+  { path: "home", component: HomeComponent },
+  { path: "home/:unitCode", component: UnitComponent }
 ]
 
 @NgModule({

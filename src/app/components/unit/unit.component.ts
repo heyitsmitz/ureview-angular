@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-unit',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnitComponent implements OnInit {
 
-  constructor() { }
+  unitCode: String;
+  unitSynopsis: String = "Synopsis......";
+
+  constructor(private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.unitCode = this._activatedRoute.snapshot.paramMap.get("unitCode");
   }
 
 }

@@ -1,1 +1,42 @@
-<p>unit works!</p>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-10">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h1 class="m-0 text-dark">{{ unitCode }}</h1>
+                    </div>
+                </div><!-- /.row -->
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-11">
+                        <h4 class="text-muted">Synopsis</h4>
+                        <p class="md-1" style="color:dimgray;">{{ unitSynopsis }}</p>
+                    </div>
+                </div><!-- /.row -->
+                <div class="row" style="margin-top: 10px">
+                    <div class="offset-sm-3">
+                        <button type="button" class="btn btn-info">
+                            Add Review
+                        </button>
+                    </div>
+                    <ul class="nav nav-pills offset-sm-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Date (Newest First)</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Rating (Highest First)</a>
+                                <a class="dropdown-item" href="#">Rating (Lowest First)</a>
+                                <a class="dropdown-item" href="#">Date (Newest First)</a>
+                                <a class="dropdown-item" href="#">Date (Oldest First)</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-8 offset-md-2 offset-xs-0">
+                        <!-- Populate with unit reviews -->
+                    </div>
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
