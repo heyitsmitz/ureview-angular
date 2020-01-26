@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UnitsListService } from 'src/app/services/units-list.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  units;
+
+  constructor(private unitsListService: UnitsListService) { }
 
   ngOnInit() {
+    this.units = this.unitsListService.getUnits();
   }
 
 }

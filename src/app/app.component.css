@@ -1,5 +1,5 @@
 .sidebar-content-wrapper {
     margin-left: 0;
     background: #f4f6f9;
-    height: 100vh;
+    height: fit-content;
 }
