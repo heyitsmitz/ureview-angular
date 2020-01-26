@@ -57,6 +57,12 @@
     background: #f8f9fa;
 }
 
+.img-sm {
+    height: 1.875rem;
+    width: 1.875rem;
+    float: left;
+}
+
 .img-sm+.img-push {
     margin-left: 2.5rem;
 }

@@ -31,6 +31,7 @@
     padding: .8125rem .5rem;
     transition: width .3s ease-in-out;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .brand-link .brand-image {

@@ -10,3 +10,16 @@
 .nav-pills .nav-link {
     color: #6c757d;
 }
+
+.nav-pills .nav-item.dropdown.show .nav-link:hover {
+    color: #fff;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    color: #007bff;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #007bff;
+}
