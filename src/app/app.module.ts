@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UnitCardComponent } from './components/unit-card/unit-card.component';
+import { UnitComponent } from './components/unit/unit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UnitCardComponent } from './components/unit-card/unit-card.component';
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
-    UnitCardComponent
+    UnitCardComponent,
+    UnitComponent
   ],
   imports: [
     BrowserModule,
