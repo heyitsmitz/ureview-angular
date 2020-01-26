@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { UnitCardComponent } from './components/unit-card/unit-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    UnitCardComponent
   ],
   imports: [
     BrowserModule,
