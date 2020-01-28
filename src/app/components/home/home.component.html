@@ -1,0 +1,50 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-10">
+          <div class="col-sm-12">
+                <div class="row">
+
+                    <div class="col-lg-9">
+                        <h1 class="m-0 text-dark">Units</h1>
+                        <ol class="breadcrumb float-sm-left">
+                            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                            <li class="breadcrumb-item active">Units</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-3 float-sm-right">
+                        <div class="row"> 
+                            <ul class="nav nav-pills float-sm-right">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Filter by School<span class="caret"></span>
+                                    </a>
+                                    <div class="dropdown-menu"></div>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-pills float-sm-right">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Sort by <span class="caret"></span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" tabindex="-1" href="#">Ratings</a>
+                                        <a class="dropdown-item" tabindex="-1" href="#">Date Added</a>
+                                        <a class="dropdown-item" tabindex="-1" href="#">Recently updated</a>
+                                        <a class="dropdown-item" tabindex="-1" href="#">Unit level</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:50px;">
+                  <div class="col-sm-8 offset-md-2 offset-xs-0">
+                    <app-unit-card *ngFor="let unit of units" [unitCode]="unit['unitCode']"></app-unit-card>
+                  </div>
+                </div>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>

@@ -1,0 +1,25 @@
+.card-comments .card-comment img {
+    height: 1.875rem;
+    width: 1.875rem;
+    float: left;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.card-comments .comment-text {
+    color: #78838e;
+    margin-left: 40px;
+}
+
+.card-comments .username {
+    color: #495057;
+    display: block;
+    font-weight: 600;
+}
+
+.card-comments .text-muted {
+    font-size: 12px;
+    font-weight: 400;
+}
