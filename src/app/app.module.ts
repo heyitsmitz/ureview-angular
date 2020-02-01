@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
 
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { UnitsComponent } from './components/units/units.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     SidebarModule.forRoot()],
   providers: [],

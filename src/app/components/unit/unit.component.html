@@ -15,27 +15,16 @@
                 </div><!-- /.row -->
                 <div class="d-flex mt-2 justify-content-center">
                     <ul style="flex-grow: 3;"></ul>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">General</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Assignment 1</a>
-                                <a class="dropdown-item" href="#">Assignment 2</a>
-                                <a class="dropdown-item" href="#">SSLC</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Date (Newest First)</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Rating (Highest First)</a>
-                                <a class="dropdown-item" href="#">Rating (Lowest First)</a>
-                                <a class="dropdown-item" href="#">Date (Newest First)</a>
-                                <a class="dropdown-item" href="#">Date (Oldest First)</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <select class="selectpicker m-2" (change)="onSelectCategory($event.target.value)" [(ngModel)]="selectedCategory">
+                        <option *ngFor="let category of categories" value="{{category}}">
+                            {{ category }}
+                        </option>
+                    </select>
+                    <select class="selectpicker m-2" (change)="onSelectSort($event.target.value)" [(ngModel)]="selectedSort">
+                        <option *ngFor="let sort of sorts" value="{{sort}}">
+                            {{ sort }}
+                        </option>
+                    </select>
                     <ul style="flex-grow: 1;"></ul>
                 </div>
                 <div class="row" style="margin-top:10px;">

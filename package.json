@@ -22,6 +22,7 @@
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@material/fab": "^4.0.0",
     "bootstrap": "^4.3.1",
+    "bootstrap-select": "^1.13.12",
     "google-sign-in": "^3.0.3",
     "googleapis": "^47.0.0",
     "ionicons": "^4.6.3",
