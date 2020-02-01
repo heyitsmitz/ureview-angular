@@ -13,13 +13,19 @@
                         <p class="md-1" style="color:dimgray;">{{ unitSynopsis }}</p>
                     </div>
                 </div><!-- /.row -->
-                <div class="row" style="margin-top: 10px">
-                    <div class="offset-sm-3">
-                        <button type="button" class="btn btn-info">
-                            Add Review
-                        </button>
-                    </div>
-                    <ul class="nav nav-pills offset-sm-3">
+                <div class="d-flex mt-2 justify-content-center">
+                    <ul style="flex-grow: 3;"></ul>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">General</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Assignment 1</a>
+                                <a class="dropdown-item" href="#">Assignment 2</a>
+                                <a class="dropdown-item" href="#">SSLC</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Date (Newest First)</a>
                             <div class="dropdown-menu">
@@ -30,6 +36,7 @@
                             </div>
                         </li>
                     </ul>
+                    <ul style="flex-grow: 1;"></ul>
                 </div>
                 <div class="row" style="margin-top:10px;">
                     <div class="col-md-8 offset-md-2 offset-xs-0">
@@ -38,5 +45,10 @@
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->
+
+        <button class="mdc-fab app-fab--absolute" aria-label="Favorite">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">add</span>
+        </button>
     </div><!-- /.container-fluid -->
 </div><!-- /.content-header -->
