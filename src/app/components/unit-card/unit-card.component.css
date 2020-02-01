@@ -41,21 +41,13 @@ a {
     text-align: center;
 }
 
-.description-block.description-block-left {
-    margin: 10px 0;
-}
-
-.description-block.description-block-center {
-    margin: 5px 5px;
-}
-
-.description-block.description-block-right {
-    margin: 0 10px;
-}
-
 .description-block>.description-header {
     font-size: 16px;
     font-weight: 600;
     margin: 0;
     padding: 0;
+}
+
+.icon.ion-ios-star {
+    color: gold;
 }
