@@ -1,9 +1,9 @@
 <a [routerLink]="['/home/units', unitCode]">
     <div class="card card-widget widget-unit">
         <div class="widget-unit-header bg-info" style="background: url('assets/img/banner.png') center center;">
-            <h3 class="widget-unit-code">{{ unitCode }}</h3>
-            <h3 class="widget-unit-period">Semester 1, 2020</h3>
-            <span class="badge badge-success right">Information Technology</span>
+            <h3 class="widget-unit-code">{{ offering.unitCode }}</h3>
+            <h3 class="widget-unit-period">Semester {{ offering.semester }}, {{ offering.year }}</h3>
+            <span class="badge badge-success right">{{ offering.facultyName }}</span>
         </div>
         <div class="card-footer" style="padding-top:10px; color: black;" >
             <div class="row">

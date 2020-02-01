@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Offering } from 'src/app/interfaces/offering';
 
 @Component({
   selector: 'app-unit-card',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UnitCardComponent implements OnInit {
 
-  @Input() unitCode: String;
+  @Input() offering: Offering;
 
   constructor() { }
 
