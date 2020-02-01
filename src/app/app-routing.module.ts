@@ -4,11 +4,19 @@ import { Routes, RouterModule, Router } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { UnitComponent } from './components/unit/unit.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './auth.guard'
+import { UnitsComponent } from './components/units/units.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", redirectTo: "home" },
-  { path: "home", component: HomeComponent },
-  { path: "home/:unitCode", component: UnitComponent }
+  { path: "login", component: LoginComponent },
+  { path: "", pathMatch: "full", redirectTo: "home/units" },
+  { path: "home", component: HomeComponent, canActivate:[AuthGuard], 
+      children: [
+       { path: 'units', component: UnitsComponent },
+       { path: 'units/:unitCode', component: UnitComponent }
+      ]}
+  
 ]
 
 @NgModule({
@@ -17,6 +25,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

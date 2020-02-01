@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ToggleSidebarService } from './services/toggle-sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { ToggleSidebarService } from './services/toggle-sidebar.service';
 })
 export class AppComponent {
 
-  constructor(public sidebarService: ToggleSidebarService) {}
+  constructor() {}
 
   ngOnInit() {}
 

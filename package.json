@@ -21,6 +21,8 @@
     "@angular/router": "~8.0.1",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "bootstrap": "^4.3.1",
+    "google-sign-in": "^3.0.3",
+    "googleapis": "^47.0.0",
     "ionicons": "^4.6.3",
     "jquery": "^3.4.1",
     "ng-sidebar": "^9.2.0",

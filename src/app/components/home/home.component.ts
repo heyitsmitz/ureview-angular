@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UnitsListService } from 'src/app/services/units-list.service';
+import { ToggleSidebarService } from 'src/app/services/toggle-sidebar.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,10 @@ import { UnitsListService } from 'src/app/services/units-list.service';
 })
 export class HomeComponent implements OnInit {
 
-  units;
-
-  constructor(private unitsListService: UnitsListService) { }
+  constructor(public sidebarService: ToggleSidebarService) { }
 
   ngOnInit() {
-    this.units = this.unitsListService.getUnits();
+    
   }
 
 }

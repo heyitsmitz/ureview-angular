@@ -11,6 +11,8 @@ import { UnitCardComponent } from './components/unit-card/unit-card.component';
 import { UnitComponent } from './components/unit/unit.component';
 import { ReviewBoxComponent } from './components/review-box/review-box.component';
 import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
+import { LoginComponent } from './components/login/login.component';
+import { UnitsComponent } from './components/units/units.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,14 @@ import { ReviewCommentComponent } from './components/review-comment/review-comme
     UnitCardComponent,
     UnitComponent,
     ReviewBoxComponent,
-    ReviewCommentComponent
+    ReviewCommentComponent,
+    LoginComponent,
+    UnitsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SidebarModule.forRoot()
-  ],
+    SidebarModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })
