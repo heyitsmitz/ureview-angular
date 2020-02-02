@@ -19,7 +19,7 @@
             <div>Rating</div>
             <app-rating [rating]='review.rating' [itemId]='rating' (ratingClick)='onRatingClick($event)'></app-rating>
         </div>
-        <button type="submit" class="btn btn-success float-right" [disabled]="!addReview.form.valid" (click)="onSubmit(); addReview.reset()">Submit</button>
+        <button type="submit" class="btn btn-success float-right" [disabled]="!addReview.form.valid" (click)="onSubmit(); addReview.reset()" [routerLink]="['../']">Submit</button>
         <div class="form-check float-right mr-3 mt-2">
             <label class="form-check-label">
                 <input type="checkbox" [(ngModel)]="review.anonymous" name="anonymity">
