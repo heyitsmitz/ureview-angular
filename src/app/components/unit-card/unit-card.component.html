@@ -1,21 +1,14 @@
 <a [routerLink]="['/home/units', unitCode]">
     <div class="card card-widget widget-unit">
         <div class="widget-unit-header bg-info" style="background: url('assets/img/banner.png') center center;">
-            <h3 class="widget-unit-code">{{ unitCode }}</h3>
-            <h3 class="widget-unit-period">Added in 2020</h3>
-            <span class="badge badge-danger right">CORE</span>
-            <span class="badge badge-success right">Information Technology</span>
+            <h3 class="widget-unit-code">{{ offering.unitCode }}</h3>
+            <h3 class="widget-unit-period">Semester {{ offering.semester }}, {{ offering.year }}</h3>
+            <span class="badge badge-success right">{{ offering.facultyName }}</span>
         </div>
         <div class="card-footer" style="padding-top:10px; color: black;" >
             <div class="row">
-                <div class="col-sm-4 border-right">
-                    <div class="description-block description-block-left">
-                        <h5 class="description-header">#1</h5>
-                        <span class="description-text">RANK</span>
-                    </div>
-                </div>
-                <div class="col-sm-4 border-right">
-                    <div class="description-block description-block-center">
+                <div class="col-sm-12">
+                    <div class="description-block">
                         <div class="row">
                             <div class="col-sm-12">
                                 <i class="icon ion-ios-star"></i>
@@ -25,13 +18,7 @@
                                 <i class="icon ion-ios-star"></i>
                             </div>
                         </div>
-                        <span class="description-text">RATING</span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="description-block description-block-right">
-                    <h5 class="description-header">3RD YEAR 1ST SEMESTER</h5>
-                    <span class="description-text">RECOMMENDED SEMESTER</span>
+                        <span>RATING</span>
                     </div>
                 </div>
             </div>
