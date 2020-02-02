@@ -34,6 +34,12 @@
     margin-top: -3px;
 }
 
+.user-block .description .icon.ion-ios-star {
+    color: gold;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
 .card-header>.card-tools {
     float: right;
     margin-right: -.625rem;
