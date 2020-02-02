@@ -34,6 +34,12 @@
     margin-top: -3px;
 }
 
+.user-block .description .icon.ion-ios-star {
+    color: #f70;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
 .card-header>.card-tools {
     float: right;
     margin-right: -.625rem;
@@ -86,10 +92,6 @@
     float: left;
 }
 
-.img-circle {
-    border-radius: 50%;
-}
-
 .card-comments .comment-text {
     color: #78838e;
     margin-left: 40px;
@@ -104,4 +106,40 @@
 .card-comments .text-muted {
     font-size: 12px;
     font-weight: 400;
+}
+
+.votebox {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+  
+.votebox .vote {
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.votebox .vote-count {
+    font-size: 24px;
+}
+
+.votebox .vote:hover {
+    color: darkgray;
+}
+
+.votebox .active.up {
+    color: turquoise;
+}
+
+.votebox .active.down {
+    color: red;
+}
+
+.review-text {
+    min-height: 60px;
+    padding-left: 48px;     /* The width of votebox */
 }

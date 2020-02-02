@@ -1,3 +1,7 @@
+:host {
+    flex: 1;
+}
+
 .content-header {
     padding: 15px .5rem;
 }
@@ -22,4 +26,17 @@
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #007bff;
+}
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute {
+    bottom: 4rem;
+    right: 2rem;
+  }
 }
