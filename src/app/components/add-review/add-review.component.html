@@ -1,5 +1,8 @@
 <div class="container">
-    <h1 class="header">{{ unitCode }} - Add Review</h1>
+    <div class="header-box">
+        <h1 class="header">{{ unitCode }} - Add Review</h1>
+        <button type="button" class="btn btn-light btn-sm material-icons" [routerLink]="['../']">close</button>
+    </div>
     <form ngSubmit="onSubmit()" #addReview="ngForm">
         <div class="form-group">
             <label for="category">Category</label>

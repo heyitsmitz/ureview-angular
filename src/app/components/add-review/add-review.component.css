@@ -10,7 +10,14 @@
     padding: 20px 15px 100px;
 }
 
+.header-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header {
     font-size: 28px;
-    padding: 5px 10px;
+    padding-bottom: 15px;
 }
