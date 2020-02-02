@@ -26,6 +26,10 @@ export class AddReviewComponent implements OnInit {
     console.log("onSubmit");
   }
 
+  onRatingClick(rating) {
+    this.review.rating = rating.rating;
+  }
+
   private _newReview() {
     this.review = {
       category: "",

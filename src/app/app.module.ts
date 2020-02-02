@@ -15,6 +15,7 @@ import { ReviewCommentComponent } from './components/review-comment/review-comme
 import { LoginComponent } from './components/login/login.component';
 import { UnitsComponent } from './components/units/units.component';
 import { AddReviewComponent } from './components/add-review/add-review.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AddReviewComponent } from './components/add-review/add-review.component
     LoginComponent,
     UnitsComponent,
     AddReviewComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
