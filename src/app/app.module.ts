@@ -14,6 +14,7 @@ import { ReviewBoxComponent } from './components/review-box/review-box.component
 import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
 import { LoginComponent } from './components/login/login.component';
 import { UnitsComponent } from './components/units/units.component';
+import { AddReviewComponent } from './components/add-review/add-review.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UnitsComponent } from './components/units/units.component';
     ReviewCommentComponent,
     LoginComponent,
     UnitsComponent,
+    AddReviewComponent,
   ],
   imports: [
     BrowserModule,
