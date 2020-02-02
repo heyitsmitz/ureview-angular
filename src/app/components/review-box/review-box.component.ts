@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewBoxComponent implements OnInit {
 
+  vote = 0; 
+  userVote = 0;     // To check whether user has already upvoted
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  upvote() {
+    this.vote += 1;
+    this.userVote += 1;
+  }
+
+  downvote() {
+    this.vote -= 1;
+    this.userVote -= 1;
   }
 
 }
