@@ -14,11 +14,12 @@ export class UnitComponent implements OnInit {
   categories = [
     "All", "Assignment 1", "Assignment 2"
   ];
-  selectedCategory: String;
 
   sorts = [
-    "Date (Newest First)", "Data (Oldest First)", "Rating (Highest First)", "Rating (Lowest First)"
+    "Date (Newest First)", "Date (Oldest First)", "Rating (Highest First)", "Rating (Lowest First)"
   ];
+
+  selectedCategory: String;
   selectedSort: String;
 
   constructor(private _activatedRoute: ActivatedRoute) { }
@@ -27,13 +28,5 @@ export class UnitComponent implements OnInit {
     this.unitCode = this._activatedRoute.snapshot.paramMap.get("unitCode");
     this.selectedCategory = this.categories[0];
     this.selectedSort = this.sorts[0];
-  }
-
-  onSelectCategory(category) {
-    console.log("Selected", category);
-  }
-
-  onSelectSort(sort) {
-    console.log("Selected", sort);
   }
 }
