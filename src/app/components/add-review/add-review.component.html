@@ -1,16 +1,19 @@
 <div class="container">
-    <h1>{{ unitCode }} - Add Review</h1>
-    <form #addReview="ngForm">
-        {{diagnostic}}
+    <h1 class="header">{{ unitCode }} - Add Review</h1>
+    <form ngSubmit="onSubmit()" #addReview="ngForm">
         <div class="form-group">
             <label for="category">Category</label>
             <select class="form-control" id="category" required [(ngModel)]="review.category" name="category">
+                <option value="" selected>Select a category</option>
                 <option *ngFor="let category of categories" [value]="category">{{category}}</option>
             </select>
         </div>
         <div class="form-group">
             <label for="review">Review</label>
-            <input type="text" class="form-control" id="review" required [(ngModel)]="review.reviewText" name="reviewText">
+            <textarea rows="5" class="form-control" id="review" required [(ngModel)]="review.reviewText" name="reviewText" #reviewText="ngModel"></textarea>
+            <div [hidden]="reviewText.valid || reviewText.pristine" class="alert alert-danger">
+                Review text is required
+            </div>
         </div>
         <div class="form-check float-left">
             <label class="form-check-label">
@@ -18,6 +21,7 @@
                 Anonymous
             </label>
         </div>
-        <button type="submit" class="btn btn-success float-right">Submit</button>
+        <button type="submit" class="btn btn-success float-right" [disabled]="!addReview.form.valid" (click)="onSubmit(); addReview.reset()">Submit</button>
     </form>
+    <br>
 </div>

@@ -18,19 +18,20 @@ export class AddReviewComponent implements OnInit {
 
   ngOnInit() {
     this.unitCode = this._activatedRoute.snapshot.paramMap.get("unitCode");
-    this.review = {
-      category: this.categories[0],
-      reviewText: "",
-      rating: 0,
-      anonymous: false
-    }
+    this._newReview();
   }
 
   onSubmit() {
     this.submitted = true;
+    console.log("onSubmit");
   }
 
-  get diagnostic() {
-    return JSON.stringify(this.review);
+  private _newReview() {
+    this.review = {
+      category: "",
+      reviewText: "",
+      rating: 0,
+      anonymous: false
+    }
   }
 }
