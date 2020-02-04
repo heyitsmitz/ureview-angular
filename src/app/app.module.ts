@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +18,17 @@ import { LoginComponent } from './components/login/login.component';
 import { UnitsComponent } from './components/units/units.component';
 import { AddReviewComponent } from './components/add-review/add-review.component';
 import { RatingComponent } from './components/rating/rating.component';
+
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("861189590650-j8jct7bgink61uvu4ndd251r4nfe2th5.apps.googleusercontent.com")
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -36,8 +49,17 @@ import { RatingComponent } from './components/rating/rating.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    SocialLoginModule,
+    FormsModule,
+    ReactiveFormsModule,
     SidebarModule.forRoot()],
-  providers: [],
+
+  providers: [
+    {
+    provide: AuthServiceConfig,
+    useFactory: provideConfig
+    }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
