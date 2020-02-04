@@ -14,16 +14,16 @@
                 <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                 <li class="nav-header">NAVIGATION</li>
                 <li class="nav-item">
-                    <a class="nav-link active" routerLink="/home">
+                    <a class="nav-link active" routerLink="/home/units">
                         <i class="fas fa-atom"></i>
                         <p>Units</p>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" (click)="signOut()">
+                <li class="nav-item flex-column fixed-bottom" >
+                    <a class="nav-link" style="cursor: pointer;" (click)="signOut()">
                         <i class="fas fa-sign-out-alt"></i>
-                        <p>Logout</p>
+                        <p>Signout</p>
                     </a>
                 </li>
 

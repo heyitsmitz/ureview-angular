@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-declare var gapi : any;
+import { Router } from '@angular/router';
+import { GooglesigninService } from '../../services/googlesignin.service';
 
 @Component({
   selector: 'app-login',
@@ -9,22 +9,21 @@ declare var gapi : any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( 
+    private authService: GooglesigninService) { }
 
-  ngOnInit() {
-    
+  ngOnInit() {    
+
+  }  
+
+  signIn(): void {
+    this.authService.signInWithGoogle();
   }
 
-  onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-    
 
-  }
+
+
 
 
 }

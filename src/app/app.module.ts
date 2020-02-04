@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SidebarModule } from 'ng-sidebar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +14,18 @@ import { ReviewBoxComponent } from './components/review-box/review-box.component
 import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
 import { LoginComponent } from './components/login/login.component';
 import { UnitsComponent } from './components/units/units.component';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
+
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("861189590650-j8jct7bgink61uvu4ndd251r4nfe2th5.apps.googleusercontent.com")
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -30,8 +43,17 @@ import { UnitsComponent } from './components/units/units.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SocialLoginModule,
+    FormsModule,
+    ReactiveFormsModule,
     SidebarModule.forRoot()],
-  providers: [],
+
+  providers: [
+    {
+    provide: AuthServiceConfig,
+    useFactory: provideConfig
+    }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
