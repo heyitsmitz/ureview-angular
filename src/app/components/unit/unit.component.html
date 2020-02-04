@@ -13,23 +13,19 @@
                         <p class="md-1" style="color:dimgray;">{{ unitSynopsis }}</p>
                     </div>
                 </div><!-- /.row -->
-                <div class="row" style="margin-top: 10px">
-                    <div class="offset-sm-3">
-                        <button type="button" class="btn btn-info">
-                            Add Review
-                        </button>
-                    </div>
-                    <ul class="nav nav-pills offset-sm-3">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Date (Newest First)</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Rating (Highest First)</a>
-                                <a class="dropdown-item" href="#">Rating (Lowest First)</a>
-                                <a class="dropdown-item" href="#">Date (Newest First)</a>
-                                <a class="dropdown-item" href="#">Date (Oldest First)</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="d-flex mt-2 justify-content-center">
+                    <ul style="flex-grow: 3;"></ul>
+                    <select class="selectpicker m-2" [(ngModel)]="selectedCategory">
+                        <option *ngFor="let category of categories" [value]="category">
+                            {{ category }}
+                        </option>
+                    </select>
+                    <select class="selectpicker m-2" [(ngModel)]="selectedSort">
+                        <option *ngFor="let sort of sorts" [value]="sort">
+                            {{ sort }}
+                        </option>
+                    </select>
+                    <ul style="flex-grow: 1;"></ul>
                 </div>
                 <div class="row" style="margin-top:10px;">
                     <div class="col-md-8 offset-md-2 offset-xs-0">
@@ -38,5 +34,10 @@
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->
+
+        <button class="mdc-fab app-fab--absolute" [routerLink]="['/home/units/', unitCode, 'add-review']">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">add</span>
+        </button>
     </div><!-- /.container-fluid -->
 </div><!-- /.content-header -->
