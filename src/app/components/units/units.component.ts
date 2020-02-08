@@ -9,21 +9,18 @@ import { Offering } from 'src/app/interfaces/offering';
 })
 export class UnitsComponent implements OnInit {
 
-  private _k: number = 2;      // Number of unit cards in a row
   offerings: Array<Offering>;
-  reordered_offerings: Array<Array<Offering>>;
+  filters = ["Information Technology", "Others"]
+  sorts = ["Ratings", "Date Added", "Recently Updated", "Unit Level"]
+
+  selectedFilter: String;
+  selectedSort: String;
   
   constructor(private unitsListService: UnitsListService) { }
 
   ngOnInit() {
     this.offerings = this.unitsListService.getUnits();
-    this._reorder();
-  }
-
-  private _reorder() {
-    this.reordered_offerings = [];
-    for (let i = 0; i < this.offerings.length; i += this._k) {
-      this.reordered_offerings.push(this.offerings.slice(i, i + this._k));
-    }
+    this.selectedFilter = this.filters[0];
+    this.selectedSort = this.sorts[0];
   }
 }

@@ -14,17 +14,15 @@
     padding: 0;
 }
 
-.nav-pills .nav-link {
+.form-control {
+    width: 15rem;
     color: #6c757d;
+    background-color: transparent;
+    border: 0;
 }
 
-.nav-pills .nav-link:not(.active):hover {
-    color: #007bff;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #007bff;
+.content-header .form-control {
+    align-self: flex-end;
 }
 
 .grid {
