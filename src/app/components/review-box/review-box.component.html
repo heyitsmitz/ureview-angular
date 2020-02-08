@@ -36,27 +36,8 @@
     
     <div class="card-footer card-comments" [ngClass]="{ 'collapse': isCollapsed }">
         <!-- Populate with comments -->
-        <div class="card-comment">
-            <!-- User image -->
-            <img class="img-circle img-sm" src="assets/img/user1-128x128.jpg" alt="User Image">
-            <div class="comment-text">
-                <span class="username">
-                    Anonymous
-                    <span class="text-muted float-right">Time</span>
-                </span><!-- /.username -->
-                Comment
-            </div><!-- /.comment-text -->
-        </div>
-        <div class="card-comment">
-            <!-- User image -->
-            <img class="img-circle img-sm" src="assets/img/user1-128x128.jpg" alt="User Image">
-            <div class="comment-text">
-                <span class="username">
-                    Anonymous
-                    <span class="text-muted float-right">Time</span>
-                </span><!-- /.username -->
-                Comment
-            </div><!-- /.comment-text -->
+        <div class="card-comment" *ngFor="let comment of comments">
+            <app-comment-card [comment]="comment"></app-comment-card>
         </div>
     </div>
 

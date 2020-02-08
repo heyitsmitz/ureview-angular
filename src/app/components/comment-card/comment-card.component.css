@@ -1,0 +1,56 @@
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-sm {
+    height: 1.875rem;
+    width: 1.875rem;
+    float: left;
+}
+
+.comment-text {
+    color: #78838e;
+    margin-left: 40px;
+}
+
+.username {
+    color: #495057;
+    display: block;
+    font-weight: 600;
+}
+
+.text-muted {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.like-dislike-box {
+    margin-left: 40px;
+    margin-top: 5px;
+    color: grey;
+}
+
+.like-dislike-box .vote {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.like-dislike-box .vote-count {
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.like-dislike-box .vote:hover {
+    color: darkgray;
+}
+
+.like-dislike-box .active.like {
+    color: green;
+}
+
+.like-dislike-box .active.dislike {
+    color: red;
+}
