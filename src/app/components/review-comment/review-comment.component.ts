@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
+import { Comment } from 'src/app/models/comment.model';
 
 @Component({
   selector: 'app-review-comment',
@@ -7,14 +8,38 @@ import { Component, OnInit, HostBinding, Input } from '@angular/core';
 })
 export class ReviewCommentComponent implements OnInit {
 
-  @HostBinding('class') classList = '';
-  @Input() class: String;
+  @Input() comment: Comment;
+
+  userVote = 0;     // To check whether user has already upvoted
 
   constructor() { }
 
   ngOnInit() {
-    if (this.class) {
-      this.classList += this.class;
+  }
+
+  upvote() {
+    if (this.userVote == 0) {
+      this.comment.vote += 1;
+      this.userVote = 1;
+    } else if (this.userVote == 1) {
+      this.comment.vote -= 1;
+      this.userVote = 0;
+    } else if (this.userVote == -1) {
+      this.comment.vote += 2
+      this.userVote = 1;
+    }
+  }
+
+  downvote() {
+    if (this.userVote == 0) {
+      this.comment.vote -= 1;
+      this.userVote = -1;
+    } else if (this.userVote == -1) {
+      this.comment.vote += 1;
+      this.userVote = 0;
+    }  else if (this.userVote == 1) {
+      this.comment.vote -= 2;
+      this.userVote = -1;
     }
   }
 

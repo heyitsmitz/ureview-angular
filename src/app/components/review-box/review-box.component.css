@@ -3,6 +3,10 @@
     margin-bottom: 1rem;
 }
 
+.card-header {
+    cursor: pointer;
+}
+
 .user-block {
     float: left;
 }
@@ -40,9 +44,8 @@
     margin-right: 1px;
 }
 
-.card-header>.card-tools {
+.card-header > .badge {
     float: right;
-    margin-right: -.625rem;
 }
 
 .btn-default {
@@ -51,12 +54,8 @@
     color: #444;
 }
 
-.btn-tool {
-    background: 0 0;
-    color: #adb5bd;
-    font-size: .875rem;
-    margin: -.75rem 0;
-    padding: .25rem .5rem;
+.collapse {
+    height: 0;
 }
 
 .card-comments {
@@ -84,28 +83,6 @@
 .card-comments .card-comment {
     border-bottom: 1px solid #e9ecef;
     padding: 8px 0;
-}
-
-.card-comments .card-comment img {
-    height: 1.875rem;
-    width: 1.875rem;
-    float: left;
-}
-
-.card-comments .comment-text {
-    color: #78838e;
-    margin-left: 40px;
-}
-
-.card-comments .username {
-    color: #495057;
-    display: block;
-    font-weight: 600;
-}
-
-.card-comments .text-muted {
-    font-size: 12px;
-    font-weight: 400;
 }
 
 .votebox {
