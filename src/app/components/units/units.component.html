@@ -39,8 +39,8 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-around mt-5" *ngFor="let row of reordered_offerings">
-                    <app-unit-card class="col-5" [offering]="offering" *ngFor="let offering of row"></app-unit-card>
+                <div class="grid mt-5">
+                    <app-unit-card [offering]="offering" *ngFor="let offering of offerings"></app-unit-card>
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->
