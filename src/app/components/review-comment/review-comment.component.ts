@@ -18,16 +18,28 @@ export class ReviewCommentComponent implements OnInit {
   }
 
   upvote() {
-    if (this.userVote < 1) {
+    if (this.userVote == 0) {
       this.comment.vote += 1;
-      this.userVote += 1;
+      this.userVote = 1;
+    } else if (this.userVote == 1) {
+      this.comment.vote -= 1;
+      this.userVote = 0;
+    } else if (this.userVote == -1) {
+      this.comment.vote += 2
+      this.userVote = 1;
     }
   }
 
   downvote() {
-    if (this.userVote > -1) {
+    if (this.userVote == 0) {
       this.comment.vote -= 1;
-      this.userVote -= 1;
+      this.userVote = -1;
+    } else if (this.userVote == -1) {
+      this.comment.vote += 1;
+      this.userVote = 0;
+    }  else if (this.userVote == 1) {
+      this.comment.vote -= 2;
+      this.userVote = -1;
     }
   }
 
