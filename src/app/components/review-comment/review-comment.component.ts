@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
-import { Comment } from 'src/app/interfaces/comment';
+import { Comment } from 'src/app/models/comment.model';
 
 @Component({
   selector: 'app-review-comment',
@@ -10,7 +10,6 @@ export class ReviewCommentComponent implements OnInit {
 
   @Input() comment: Comment;
 
-  vote = 0; 
   userVote = 0;     // To check whether user has already upvoted
 
   constructor() { }
@@ -20,15 +19,15 @@ export class ReviewCommentComponent implements OnInit {
 
   upvote() {
     if (this.userVote < 1) {
-      this.vote = 1;
-      this.userVote = 1;
+      this.comment.vote += 1;
+      this.userVote += 1;
     }
   }
 
   downvote() {
     if (this.userVote > -1) {
-      this.vote = -1;
-      this.userVote = -1;
+      this.comment.vote -= 1;
+      this.userVote -= 1;
     }
   }
 

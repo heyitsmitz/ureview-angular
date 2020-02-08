@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Comment } from 'src/app/interfaces/comment'
+import { Comment } from 'src/app/models/comment.model'
 
 @Component({
   selector: 'app-review-box',
@@ -12,9 +12,9 @@ export class ReviewBoxComponent implements OnInit {
   userVote = 0;     // To check whether user has already upvoted
   isCollapsed = false;
   comments: Array<Comment> = [
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 10 },
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 9 },
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 7 },
+    new Comment('Anonymous', 'Comment', 'Fri at 6 pm', 15),
+    new Comment('Anonymous', 'Comment', 'Fri at 6 pm', 14),
+    new Comment('Anonymous', 'Comment', 'Fri at 6 pm', 12),
   ];
 
   constructor() { }
