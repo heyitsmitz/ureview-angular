@@ -9,6 +9,7 @@ export class ReviewBoxComponent implements OnInit {
 
   vote = 0; 
   userVote = 0;     // To check whether user has already upvoted
+  isCollapsed = false;
 
   constructor() { }
 
@@ -23,6 +24,10 @@ export class ReviewBoxComponent implements OnInit {
   downvote() {
     this.vote -= 1;
     this.userVote -= 1;
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }

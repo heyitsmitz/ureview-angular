@@ -1,6 +1,6 @@
 <!-- Review Box -->
 <div class="card card-widget">
-    <div class="card-header">
+    <div class="card-header" (click)="toggleCollapse()">
         <div class="user-block">
             <img class="img-circle" src="assets/img/user1-128x128.jpg" alt="User Image">
             <span class="username">Anonymous</span>
@@ -13,15 +13,10 @@
             </span>
             <span class="description mt-1">Fri at 6.00pm</span>
         </div><!-- /.user-block -->
-        <span class="badge badge-pill badge-info ml-2">Assignment 1</span>
-        <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                <i class="fas fa-minus"></i>
-            </button>
-        </div><!-- /.card-tools -->
+        <span class="badge badge-pill badge-info">Assignment 1</span>
     </div><!-- /.card-header -->
     
-    <div class="card-body">
+    <div class="card-body" [ngClass]="{ 'collapse': isCollapsed }">
         <div class="votebox float-left mr-3">
             <span class="vote up material-icons"
                     (click)="upvote()"
@@ -39,7 +34,7 @@
         <span class="float-right text-muted">2 comments</span>
     </div><!-- /.card-body -->
     
-    <div class="card-footer card-comments">
+    <div class="card-footer card-comments" [ngClass]="{ 'collapse': isCollapsed }">
         <!-- Populate with comments -->
         <div class="card-comment">
             <!-- User image -->
@@ -66,7 +61,7 @@
     </div>
 
     <!-- /.card-footer -->
-    <div class="card-footer">
+    <div class="card-footer" [ngClass]="{ 'collapse': isCollapsed }">
         <form action="#" method="post">
             <img class="img-fluid img-circle img-sm" src="assets/img/user1-128x128.jpg" alt="Alt Text">
             <!-- .img-push is used to add margin to elements next to floating images -->
