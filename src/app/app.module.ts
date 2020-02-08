@@ -17,7 +17,6 @@ import { LoginComponent } from './components/login/login.component';
 import { UnitsComponent } from './components/units/units.component';
 import { AddReviewComponent } from './components/add-review/add-review.component';
 import { RatingComponent } from './components/rating/rating.component';
-import { CommentCardComponent } from './components/comment-card/comment-card.component';
 
 const config = new AuthServiceConfig([
   {
@@ -44,7 +43,6 @@ export function provideConfig() {
     UnitsComponent,
     AddReviewComponent,
     RatingComponent,
-    CommentCardComponent,
   ],
   imports: [
     BrowserModule,

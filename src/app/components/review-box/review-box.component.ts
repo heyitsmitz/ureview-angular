@@ -12,9 +12,9 @@ export class ReviewBoxComponent implements OnInit {
   userVote = 0;     // To check whether user has already upvoted
   isCollapsed = false;
   comments: Array<Comment> = [
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm' },
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm' },
-    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm' },
+    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 10 },
+    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 9 },
+    { 'username': 'Anonymous', 'commentText': 'Comment', 'datetime': 'Fri at 6pm', 'vote': 7 },
   ];
 
   constructor() { }
